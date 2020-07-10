@@ -1,2 +1,2 @@
 # skyeng-words
-Skyeng Word - preinterview test project
+Skyeng Words - preinterview test project
