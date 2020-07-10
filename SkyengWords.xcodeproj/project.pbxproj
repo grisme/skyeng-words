@@ -14,6 +14,8 @@
 		07F6327824B8F1BE00591BF5 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6327724B8F1BE00591BF5 /* Networking.swift */; };
 		07F6327A24B8F4D400591BF5 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6327924B8F4D400591BF5 /* RequestType.swift */; };
 		07F6327C24B8F61200591BF5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6327B24B8F61200591BF5 /* NetworkService.swift */; };
+		07F6328124B903D200591BF5 /* WordsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6328024B903D200591BF5 /* WordsProviding.swift */; };
+		07F6328324B9048300591BF5 /* WordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6328224B9048300591BF5 /* WordsService.swift */; };
 		1366D99C691B88F4D0C338FB /* Pods_SkyengWordsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162F9631E94559BEB2BC2360 /* Pods_SkyengWordsTests.framework */; };
 		FF861D76063249D93CC01AA6 /* Pods_SkyengWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FE06C7C73E5F0BB682DDEF /* Pods_SkyengWords.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		07F6327724B8F1BE00591BF5 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		07F6327924B8F4D400591BF5 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		07F6327B24B8F61200591BF5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		07F6328024B903D200591BF5 /* WordsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsProviding.swift; sourceTree = "<group>"; };
+		07F6328224B9048300591BF5 /* WordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsService.swift; sourceTree = "<group>"; };
 		162F9631E94559BEB2BC2360 /* Pods_SkyengWordsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyengWordsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20916E4C075831902D9CB725 /* Pods-SkyengWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyengWords.debug.xcconfig"; path = "Target Support Files/Pods-SkyengWords/Pods-SkyengWords.debug.xcconfig"; sourceTree = "<group>"; };
 		502D17F55ED1C3335F3C3137 /* Pods-SkyengWordsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyengWordsTests.debug.xcconfig"; path = "Target Support Files/Pods-SkyengWordsTests/Pods-SkyengWordsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				07F6327524B8F19A00591BF5 /* Base */,
+				07F6327E24B9036400591BF5 /* Services */,
 				07F6327224B8ED0100591BF5 /* Resources */,
 				07F6327124B8ECEF00591BF5 /* Supporting files */,
 				07F6324F24B8ECB100591BF5 /* AppDelegate.swift */,
@@ -157,6 +162,23 @@
 				07F6327B24B8F61200591BF5 /* NetworkService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		07F6327E24B9036400591BF5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				07F6327F24B903C700591BF5 /* Words */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		07F6327F24B903C700591BF5 /* Words */ = {
+			isa = PBXGroup;
+			children = (
+				07F6328024B903D200591BF5 /* WordsProviding.swift */,
+				07F6328224B9048300591BF5 /* WordsService.swift */,
+			);
+			path = Words;
 			sourceTree = "<group>";
 		};
 		2F9DECBDC0409150CC4F5E41 /* Frameworks */ = {
@@ -349,7 +371,9 @@
 				07F6325024B8ECB100591BF5 /* AppDelegate.swift in Sources */,
 				07F6327824B8F1BE00591BF5 /* Networking.swift in Sources */,
 				07F6327C24B8F61200591BF5 /* NetworkService.swift in Sources */,
+				07F6328324B9048300591BF5 /* WordsService.swift in Sources */,
 				07F6327A24B8F4D400591BF5 /* RequestType.swift in Sources */,
+				07F6328124B903D200591BF5 /* WordsProviding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

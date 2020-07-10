@@ -73,10 +73,10 @@ final class NetworkService: Networking {
     private func parameterEncoder(for requestType: RequestType) -> ParameterEncoder {
         let encoder: ParameterEncoder
         switch requestType {
-        case .get:
+        case .post:
             let jsonEncoder = JSONEncoder()
             encoder = JSONParameterEncoder(encoder: jsonEncoder)
-        case .post:
+        case .get:
             encoder = URLEncodedFormParameterEncoder.default
         }
         return encoder
@@ -110,13 +110,9 @@ final class NetworkService: Networking {
             headers: nil
         )
         .validate(statusCode: 200...299)
-        .response(queue: self.networkQueue) { response in
+        .responseData(queue: self.networkQueue) { response in
             switch response.result {
             case .success(let data):
-                guard let data = data else {
-                    completion(.failure(.nodataError))
-                    return
-                }
                 completion(.success(data))
                 
             case .failure(let aferror):

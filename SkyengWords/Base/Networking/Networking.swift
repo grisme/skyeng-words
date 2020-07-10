@@ -13,7 +13,6 @@ enum NetworkError: LocalizedError {
     
     case invalidURL
     case unsupportedHTTPMethod
-    case connectionError(code: Int)
     case requestError(code: Int)
     case nodataError
     
