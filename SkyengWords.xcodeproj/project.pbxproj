@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		07F6325924B8ECB200591BF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F6325824B8ECB200591BF5 /* Images.xcassets */; };
 		07F6325C24B8ECB200591BF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F6325A24B8ECB200591BF5 /* LaunchScreen.storyboard */; };
 		07F6326724B8ECB200591BF5 /* SkyengWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6326624B8ECB200591BF5 /* SkyengWordsTests.swift */; };
+		07F6327824B8F1BE00591BF5 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6327724B8F1BE00591BF5 /* Networking.swift */; };
+		07F6327A24B8F4D400591BF5 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6327924B8F4D400591BF5 /* RequestType.swift */; };
+		07F6327C24B8F61200591BF5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6327B24B8F61200591BF5 /* NetworkService.swift */; };
 		1366D99C691B88F4D0C338FB /* Pods_SkyengWordsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162F9631E94559BEB2BC2360 /* Pods_SkyengWordsTests.framework */; };
 		FF861D76063249D93CC01AA6 /* Pods_SkyengWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FE06C7C73E5F0BB682DDEF /* Pods_SkyengWords.framework */; };
 /* End PBXBuildFile section */
@@ -34,6 +37,9 @@
 		07F6326224B8ECB200591BF5 /* SkyengWordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyengWordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F6326624B8ECB200591BF5 /* SkyengWordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyengWordsTests.swift; sourceTree = "<group>"; };
 		07F6326824B8ECB200591BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07F6327724B8F1BE00591BF5 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		07F6327924B8F4D400591BF5 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		07F6327B24B8F61200591BF5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		162F9631E94559BEB2BC2360 /* Pods_SkyengWordsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyengWordsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20916E4C075831902D9CB725 /* Pods-SkyengWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyengWords.debug.xcconfig"; path = "Target Support Files/Pods-SkyengWords/Pods-SkyengWords.debug.xcconfig"; sourceTree = "<group>"; };
 		502D17F55ED1C3335F3C3137 /* Pods-SkyengWordsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyengWordsTests.debug.xcconfig"; path = "Target Support Files/Pods-SkyengWordsTests/Pods-SkyengWordsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 		07F6324E24B8ECB100591BF5 /* SkyengWords */ = {
 			isa = PBXGroup;
 			children = (
+				07F6327524B8F19A00591BF5 /* Base */,
 				07F6327224B8ED0100591BF5 /* Resources */,
 				07F6327124B8ECEF00591BF5 /* Supporting files */,
 				07F6324F24B8ECB100591BF5 /* AppDelegate.swift */,
@@ -134,6 +141,24 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		07F6327524B8F19A00591BF5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				07F6327624B8F1A100591BF5 /* Networking */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		07F6327624B8F1A100591BF5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				07F6327924B8F4D400591BF5 /* RequestType.swift */,
+				07F6327724B8F1BE00591BF5 /* Networking.swift */,
+				07F6327B24B8F61200591BF5 /* NetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		2F9DECBDC0409150CC4F5E41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +176,6 @@
 				502D17F55ED1C3335F3C3137 /* Pods-SkyengWordsTests.debug.xcconfig */,
 				B0FF01C321DAB5C1400C4666 /* Pods-SkyengWordsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -166,6 +190,7 @@
 				07F6324824B8ECB100591BF5 /* Sources */,
 				07F6324924B8ECB100591BF5 /* Frameworks */,
 				07F6324A24B8ECB100591BF5 /* Resources */,
+				1C95506B5FAC66E4F91344FC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +278,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1C95506B5FAC66E4F91344FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyengWords/Pods-SkyengWords-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyengWords/Pods-SkyengWords-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SkyengWords/Pods-SkyengWords-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		453FE956FE26B8AD907106CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,6 +347,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F6325024B8ECB100591BF5 /* AppDelegate.swift in Sources */,
+				07F6327824B8F1BE00591BF5 /* Networking.swift in Sources */,
+				07F6327C24B8F61200591BF5 /* NetworkService.swift in Sources */,
+				07F6327A24B8F4D400591BF5 /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JLB3QWZPEY;
-				INFOPLIST_FILE = SkyengWords/Info.plist;
+				INFOPLIST_FILE = SkyengWords/Resources/Plists/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,7 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JLB3QWZPEY;
-				INFOPLIST_FILE = SkyengWords/Info.plist;
+				INFOPLIST_FILE = SkyengWords/Resources/Plists/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

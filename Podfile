@@ -1,15 +1,15 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
+platform :ios, '11.0'
 target 'SkyengWords' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for SkyengWords
-
+  # Networking
+  pod 'Alamofire', '~> 5.2'
+  
+  # Debugging
+  pod 'Reveal-SDK', '24'
+  
   target 'SkyengWordsTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
 end
