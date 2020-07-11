@@ -24,6 +24,7 @@ final class SearchAssembly {
         
         interactor.output = presenter
         presenter.view = view
+        router.view = view
         return view
     }
     

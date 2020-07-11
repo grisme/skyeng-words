@@ -81,8 +81,10 @@ final class MeaningTableViewCell: UITableViewCell {
     // MARK: - Public methods
     
     func fill(with meaningViewModel: MeaningViewModel) {
-        titleLabel.text = meaningViewModel.meaningDescription.translation.text
-        transcriptionLabel.text = meaningViewModel.meaningDescription.transcription
+        let translation = meaningViewModel.translation
+        let transcription = meaningViewModel.transcription.isEmpty ? "Transcription unavailable" : meaningViewModel.transcription
+        titleLabel.text = translation
+        transcriptionLabel.text = transcription
     }
 
 }

@@ -1,5 +1,5 @@
 //
-//  MeaningDescription.swift
+//  Meaning.swift
 //  SkyengWords
 //
 //  Created by Eugene Garifullin on 11.07.2020.
@@ -8,20 +8,29 @@
 
 import Foundation
 
-/// Describes simple word's meaning description
-struct MeaningDescription: Codable {
+
+/// Describes detailed word's meaning entity
+struct Meaning: Codable {
+    
+    /// Describes meaning image structure
+    struct Image: Codable {
+        let url: String
+    }
+        
     /// Unique identifier
     let id: Int
     /// Part of speech
     let partOfSpeechCode: PartOfSpeech
     /// Meaning's translation
-    let translation: MeaningTranslation
-    /// Image preview URL
-    let previewUrl: String
-    // Image URL
-    let imageUrl: String
+    let translation: Translation
     /// Meaning transcription
     let transcription: String
     /// Meaning playable sound URL
     let soundUrl: String
+    /// Images collection
+    let images: [Image]
+    /// Meaning definition
+    let definition: Definition
+    /// Examples
+    let examples: [Example]
 }

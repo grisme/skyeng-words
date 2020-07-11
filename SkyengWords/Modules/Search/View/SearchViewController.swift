@@ -41,8 +41,15 @@ final class SearchViewController: UIViewController {
         let tableview = UITableView(frame: .zero, style: .grouped)
         tableview.delegate = self
         tableview.dataSource = self
+        tableview.alwaysBounceVertical = false
         tableview.register(cellClass: MeaningTableViewCell.self)
         return tableview
+    }()
+    
+    private lazy var fetchingSpinner: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .gray)
+        indicator.frame = .init(x: 0.0, y: 0.0, width: 30.0, height: 30.0)
+        return indicator
     }()
     
     // MARK: - Lifecycle
@@ -98,15 +105,24 @@ extension SearchViewController: SearchViewInput {
     }
     
     func insertResults(models: [WordViewModel]) {
-        self.resultsTableView.beginUpdates()
+        
+        // Prevent empty results insertion
+        guard !models.isEmpty else {
+            return
+        }
         
         self.models.append(contentsOf: models)
-        
-        self.resultsTableView.endUpdates()
+        self.resultsTableView.reloadData()
     }
     
     func setLoadingEnabled(enabled: Bool) {
         
+    }
+    
+    func setFetchingLoader(enabled: Bool) {
+        enabled ? fetchingSpinner.startAnimating() : fetchingSpinner.stopAnimating()
+        resultsTableView.tableFooterView = enabled ? fetchingSpinner : nil
+        resultsTableView.tableFooterView?.isHidden = !enabled
     }
     
     func setSearchBarEnabled(enabled: Bool) {
@@ -148,7 +164,24 @@ extension SearchViewController: UITableViewDelegate & UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        // Touch presenter
+        let meaningViewModel = models[indexPath.section].meanings[indexPath.row]
+        output.didSelectMeaning(meaningViewModel: meaningViewModel)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let section = indexPath.section
+        let row = indexPath.row
+        
+        // Checking that table view at the bottom
+        guard
+            section == models.count - 1,
+            row == models[section].meaningsCount - 1
+        else {
+            return
+        }
+        
+        // Should fetch more
+        output.shouldFetchMore()
     }
 }
 

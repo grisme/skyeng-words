@@ -1,5 +1,5 @@
 //
-//  SearchRouterProtocols.swift
+//  TextSoundable.swift
 //  SkyengWords
 //
 //  Created by Eugene Garifullin on 11.07.2020.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol SearchRouterInput: class {
-    func routeToMeaningDetail(meaningId: Int)
+protocol TextSoundable: Codable {
+    var text: String { get }
+    var soundUrl: String? { get }
 }

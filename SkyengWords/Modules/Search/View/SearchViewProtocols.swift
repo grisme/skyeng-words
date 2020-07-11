@@ -12,6 +12,7 @@ protocol SearchViewInput: class {
     func setSearchBarEnabled(enabled: Bool)
     func completeEditing(clearSearchBar: Bool)
     func setLoadingEnabled(enabled: Bool)
+    func setFetchingLoader(enabled: Bool)
     
     func reloadResults(models: [WordViewModel])
     func insertResults(models: [WordViewModel])
@@ -22,4 +23,7 @@ protocol SearchViewOutput: class {
     func searchBarShouldChange(text: String) -> Bool
     func searchBarSearch(text: String)
     func searchBarCancel()
+    func shouldFetchMore()
+    func didSelectMeaning(meaningViewModel: MeaningViewModel)
+    
 }

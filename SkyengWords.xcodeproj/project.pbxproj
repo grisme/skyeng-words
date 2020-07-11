@@ -12,9 +12,19 @@
 		075E36DE24B9F97D00378649 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E36DD24B9F97D00378649 /* UITableView+Extension.swift */; };
 		075E36E024B9FB7900378649 /* MeaningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E36DF24B9FB7900378649 /* MeaningViewModel.swift */; };
 		075E36E324B9FFD600378649 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E36E224B9FFD600378649 /* UIFont+Extension.swift */; };
+		075E36EB24BA073A00378649 /* MeaningDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E36EA24BA073A00378649 /* MeaningDetailAssembly.swift */; };
+		075E36ED24BA079D00378649 /* MeaningDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E36EC24BA079D00378649 /* MeaningDetailViewController.swift */; };
+		075E36EF24BA097800378649 /* MeaningDetailViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E36EE24BA097800378649 /* MeaningDetailViewProtocols.swift */; };
+		075E36F124BA09AF00378649 /* MeaningDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E36F024BA09AF00378649 /* MeaningDetailPresenter.swift */; };
+		075E36F324BA0B4200378649 /* MeaningDetailInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E36F224BA0B4200378649 /* MeaningDetailInteractorProtocols.swift */; };
+		075E36F524BA0C0200378649 /* MeaningDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E36F424BA0C0200378649 /* MeaningDetailInteractor.swift */; };
+		075E36F724BA18F700378649 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E36F624BA18F700378649 /* Meaning.swift */; };
+		075E36FF24BA1F2F00378649 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E36FE24BA1F2F00378649 /* Definition.swift */; };
+		075E370124BA1F5500378649 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E370024BA1F5500378649 /* Example.swift */; };
+		075E370424BA1F9400378649 /* TextSoundable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E370324BA1F9400378649 /* TextSoundable.swift */; };
 		0791B86824B99CDC00D6F19C /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791B86724B99CDC00D6F19C /* Word.swift */; };
 		0791B86A24B99DB600D6F19C /* MeaningDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791B86924B99DB600D6F19C /* MeaningDescription.swift */; };
-		0791B86D24B99E3B00D6F19C /* MeaningTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791B86C24B99E3B00D6F19C /* MeaningTranslation.swift */; };
+		0791B86D24B99E3B00D6F19C /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791B86C24B99E3B00D6F19C /* Translation.swift */; };
 		0791B86F24B99F4800D6F19C /* PartOfSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791B86E24B99F4800D6F19C /* PartOfSpeech.swift */; };
 		0791B87824B9B17E00D6F19C /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791B87724B9B17E00D6F19C /* SearchAssembly.swift */; };
 		0791B87A24B9B1A000D6F19C /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791B87924B9B1A000D6F19C /* SearchRouter.swift */; };
@@ -55,9 +65,19 @@
 		075E36DD24B9F97D00378649 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		075E36DF24B9FB7900378649 /* MeaningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningViewModel.swift; sourceTree = "<group>"; };
 		075E36E224B9FFD600378649 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		075E36EA24BA073A00378649 /* MeaningDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningDetailAssembly.swift; sourceTree = "<group>"; };
+		075E36EC24BA079D00378649 /* MeaningDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningDetailViewController.swift; sourceTree = "<group>"; };
+		075E36EE24BA097800378649 /* MeaningDetailViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningDetailViewProtocols.swift; sourceTree = "<group>"; };
+		075E36F024BA09AF00378649 /* MeaningDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningDetailPresenter.swift; sourceTree = "<group>"; };
+		075E36F224BA0B4200378649 /* MeaningDetailInteractorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningDetailInteractorProtocols.swift; sourceTree = "<group>"; };
+		075E36F424BA0C0200378649 /* MeaningDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningDetailInteractor.swift; sourceTree = "<group>"; };
+		075E36F624BA18F700378649 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
+		075E36FE24BA1F2F00378649 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		075E370024BA1F5500378649 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		075E370324BA1F9400378649 /* TextSoundable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSoundable.swift; sourceTree = "<group>"; };
 		0791B86724B99CDC00D6F19C /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		0791B86924B99DB600D6F19C /* MeaningDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningDescription.swift; sourceTree = "<group>"; };
-		0791B86C24B99E3B00D6F19C /* MeaningTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningTranslation.swift; sourceTree = "<group>"; };
+		0791B86C24B99E3B00D6F19C /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		0791B86E24B99F4800D6F19C /* PartOfSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOfSpeech.swift; sourceTree = "<group>"; };
 		0791B87724B9B17E00D6F19C /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
 		0791B87924B9B1A000D6F19C /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
@@ -143,13 +163,94 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		0791B86624B99CCB00D6F19C /* Entities */ = {
+		075E36E424BA06EA00378649 /* MeaningDetail */ = {
+			isa = PBXGroup;
+			children = (
+				075E36E924BA072C00378649 /* Assembly */,
+				075E36E824BA071000378649 /* Router */,
+				075E36E724BA070B00378649 /* Interactor */,
+				075E36E624BA070600378649 /* Presenter */,
+				075E36E524BA06F500378649 /* View */,
+			);
+			path = MeaningDetail;
+			sourceTree = "<group>";
+		};
+		075E36E524BA06F500378649 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				075E36EC24BA079D00378649 /* MeaningDetailViewController.swift */,
+				075E36EE24BA097800378649 /* MeaningDetailViewProtocols.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		075E36E624BA070600378649 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				075E36F024BA09AF00378649 /* MeaningDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		075E36E724BA070B00378649 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				075E36F224BA0B4200378649 /* MeaningDetailInteractorProtocols.swift */,
+				075E36F424BA0C0200378649 /* MeaningDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		075E36E824BA071000378649 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		075E36E924BA072C00378649 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				075E36EA24BA073A00378649 /* MeaningDetailAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		075E36FB24BA1EEB00378649 /* Word */ = {
 			isa = PBXGroup;
 			children = (
 				0791B86724B99CDC00D6F19C /* Word.swift */,
+			);
+			path = Word;
+			sourceTree = "<group>";
+		};
+		075E36FC24BA1EF300378649 /* Meaning */ = {
+			isa = PBXGroup;
+			children = (
+				075E36FD24BA1F0D00378649 /* Additional */,
 				0791B86924B99DB600D6F19C /* MeaningDescription.swift */,
-				0791B86C24B99E3B00D6F19C /* MeaningTranslation.swift */,
+				075E36F624BA18F700378649 /* Meaning.swift */,
+			);
+			path = Meaning;
+			sourceTree = "<group>";
+		};
+		075E36FD24BA1F0D00378649 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				075E370324BA1F9400378649 /* TextSoundable.swift */,
+				0791B86C24B99E3B00D6F19C /* Translation.swift */,
 				0791B86E24B99F4800D6F19C /* PartOfSpeech.swift */,
+				075E36FE24BA1F2F00378649 /* Definition.swift */,
+				075E370024BA1F5500378649 /* Example.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		0791B86624B99CCB00D6F19C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				075E36FC24BA1EF300378649 /* Meaning */,
+				075E36FB24BA1EEB00378649 /* Word */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -157,6 +258,7 @@
 		0791B87024B9B10200D6F19C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				075E36E424BA06EA00378649 /* MeaningDetail */,
 				0791B87124B9B11100D6F19C /* Search */,
 			);
 			path = Modules;
@@ -551,23 +653,33 @@
 				07F6325024B8ECB100591BF5 /* AppDelegate.swift in Sources */,
 				0791B88224B9B27D00D6F19C /* SearchInteractor.swift in Sources */,
 				0791B86824B99CDC00D6F19C /* Word.swift in Sources */,
-				0791B86D24B99E3B00D6F19C /* MeaningTranslation.swift in Sources */,
+				0791B86D24B99E3B00D6F19C /* Translation.swift in Sources */,
 				075E36E324B9FFD600378649 /* UIFont+Extension.swift in Sources */,
+				075E36ED24BA079D00378649 /* MeaningDetailViewController.swift in Sources */,
 				075E36D824B9F6CE00378649 /* WordViewModel.swift in Sources */,
 				0791B88024B9B25E00D6F19C /* SearchInteractorProtocols.swift in Sources */,
 				0791B87824B9B17E00D6F19C /* SearchAssembly.swift in Sources */,
 				07F6327824B8F1BE00591BF5 /* Networking.swift in Sources */,
+				075E36EF24BA097800378649 /* MeaningDetailViewProtocols.swift in Sources */,
 				07F6327C24B8F61200591BF5 /* NetworkService.swift in Sources */,
 				075E36DE24B9F97D00378649 /* UITableView+Extension.swift in Sources */,
 				07F6328324B9048300591BF5 /* WordsService.swift in Sources */,
+				075E36F724BA18F700378649 /* Meaning.swift in Sources */,
+				075E370124BA1F5500378649 /* Example.swift in Sources */,
 				0791B88624B9B3C300D6F19C /* SearchViewProtocols.swift in Sources */,
+				075E36F124BA09AF00378649 /* MeaningDetailPresenter.swift in Sources */,
 				0791B87E24B9B20500D6F19C /* SearchViewController.swift in Sources */,
+				075E36FF24BA1F2F00378649 /* Definition.swift in Sources */,
 				07F6327A24B8F4D400591BF5 /* RequestType.swift in Sources */,
+				075E36EB24BA073A00378649 /* MeaningDetailAssembly.swift in Sources */,
+				075E370424BA1F9400378649 /* TextSoundable.swift in Sources */,
 				0791B87C24B9B1B000D6F19C /* SearchRouterProtocols.swift in Sources */,
+				075E36F324BA0B4200378649 /* MeaningDetailInteractorProtocols.swift in Sources */,
 				0791B86A24B99DB600D6F19C /* MeaningDescription.swift in Sources */,
 				0791B88424B9B30700D6F19C /* SearchPresenter.swift in Sources */,
 				075E36DB24B9F8A300378649 /* MeaningTableViewCell.swift in Sources */,
 				07F6328124B903D200591BF5 /* WordsProviding.swift in Sources */,
+				075E36F524BA0C0200378649 /* MeaningDetailInteractor.swift in Sources */,
 				0791B86F24B99F4800D6F19C /* PartOfSpeech.swift in Sources */,
 				075E36E024B9FB7900378649 /* MeaningViewModel.swift in Sources */,
 			);

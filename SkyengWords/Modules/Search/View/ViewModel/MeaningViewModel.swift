@@ -13,6 +13,12 @@ struct MeaningViewModel {
     /// Source meaning entity
     let meaningDescription: MeaningDescription
 
+    var translation: String {
+        meaningDescription.translation.text ?? ""
+    }
     
+    var transcription: String {
+        meaningDescription.transcription
+    }
     
 }
