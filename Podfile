@@ -5,6 +5,9 @@ target 'SkyengWords' do
   # Networking
   pod 'Alamofire', '~> 5.2'
   
+  # UI
+  pod 'SnapKit', '~> 5.0.0'
+  
   # Debugging
   pod 'Reveal-SDK', '24'
   
