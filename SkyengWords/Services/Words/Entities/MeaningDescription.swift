@@ -16,7 +16,7 @@ struct MeaningDescription: Codable {
     let partOfSpeechCode: PartOfSpeech
     /// Meaning's translation
     let translation: MeaningTranslation
-    /// ???
+    /// Image preview URL
     let previewUrl: String
     // Image URL
     let imageUrl: String
