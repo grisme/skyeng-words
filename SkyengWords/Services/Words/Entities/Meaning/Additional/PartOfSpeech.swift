@@ -26,4 +26,42 @@ enum PartOfSpeech: String, Codable, CaseIterable {
     case modalVerb = "md"
     case phrase = "ph"
     case idiom = "phi"
+    
+    /// Returns part of speech display name
+    var displayName: String {
+        switch self {
+        case .noun:
+            return "noun"
+        case .verb:
+            return "verb"
+        case .adjective:
+            return "adjective"
+        case .adverb:
+            return "adverb"
+        case .preposition:
+            return "preposition"
+        case .pronoun:
+            return "pronoun"
+        case .cardinalNumber:
+            return "cardinal number"
+        case .conjunction:
+            return "conjunction"
+        case .interjection:
+            return "interjection"
+        case .article:
+            return "article"
+        case .abbreviation:
+            return "abbreviation"
+        case .particle:
+            return "particle"
+        case .ordinalNumber:
+            return "ordinal number"
+        case .modalVerb:
+            return "modal verb"
+        case .phrase:
+            return "phrase"
+        case .idiom:
+            return "idiom"
+        }
+    }
 }

@@ -14,6 +14,7 @@ extension UIColor {
         
         enum View {
             static let viewBackground = UIColor(named: "viewBackground")!
+            static let cellBackground = UIColor(named: "cellBackground")!
         }
         
         enum Text {

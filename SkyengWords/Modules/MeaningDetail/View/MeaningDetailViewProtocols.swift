@@ -9,10 +9,13 @@
 import Foundation
 
 protocol MeaningDetailViewInput: class {
+    func showMeaning(meaningViewModel: MeaningDetailViewModel)
+    func endRefreshing()
     func setLoadingEnabled(enabled: Bool)
 }
 
 protocol MeaningDetailViewOutput: class {
     func viewDidLoad()
+    func shouldRefresh()
 }
 

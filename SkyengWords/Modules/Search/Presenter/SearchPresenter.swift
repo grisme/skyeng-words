@@ -67,10 +67,13 @@ extension SearchPresenter: SearchViewOutput {
                 self?.fetchingAvailable = !words.isEmpty
                 self?.view?.setLoadingEnabled(enabled: false)
                 self?.view?.reloadResults(models: words)
+                if words.isEmpty {
+                    self?.view?.setNoResultsState()
+                }
             },
             failure: { [weak self] error in
                 self?.view?.setLoadingEnabled(enabled: false)
-                // show error
+                self?.view?.setErrorState(text: error.localizedDescription)
             }
         )
     }
@@ -80,7 +83,7 @@ extension SearchPresenter: SearchViewOutput {
     }
 
     func viewDidLoad() {
-        // prepare view 
+        view?.setInitialState()
     }
     
     func didSelectMeaning(meaningViewModel: MeaningViewModel) {
@@ -108,7 +111,6 @@ extension SearchPresenter: SearchViewOutput {
             },
             failure: { [weak self] error in
                 self?.view?.setFetchingLoader(enabled: false)
-                // show error
             }
         )
     }

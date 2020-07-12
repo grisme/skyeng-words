@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-final class SearchViewController: UIViewController {
+final class SearchViewController: BaseViewController {
     
     // MARK: - Appearance
     
@@ -17,12 +17,15 @@ final class SearchViewController: UIViewController {
         let backgroundColor = UIColor.Common.View.viewBackground
         let searchBarHeight: CGFloat = 54.0
         let searchBarDisabledOpacity: CGFloat = 0.75
+        let stateLabelBackgroundColor = UIColor.Common.View.viewBackground
+        let stateLabelTextColor = UIColor.Common.Text.subtitleText
+        let stateLabelFont = UIFont.bold(with: 28.0)
     }
     private let appearance = Appearance()
     
     // MARK: - Properties
     
-    let output: SearchViewOutput
+    let presenter: SearchViewOutput
     
     /// Datasource models
     var models: [WordViewModel] = []
@@ -42,8 +45,19 @@ final class SearchViewController: UIViewController {
         tableview.delegate = self
         tableview.dataSource = self
         tableview.alwaysBounceVertical = false
+        tableview.keyboardDismissMode = .interactive
         tableview.register(cellClass: MeaningTableViewCell.self)
         return tableview
+    }()
+    
+    private lazy var stateLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.backgroundColor = appearance.stateLabelBackgroundColor
+        label.textColor = appearance.stateLabelTextColor
+        label.font = appearance.stateLabelFont
+        return label
     }()
     
     private lazy var fetchingSpinner: UIActivityIndicatorView = {
@@ -54,8 +68,8 @@ final class SearchViewController: UIViewController {
     
     // MARK: - Lifecycle
     
-    init(output: SearchViewOutput) {
-        self.output = output
+    init(presenter: SearchViewOutput) {
+        self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -66,7 +80,8 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        output.viewDidLoad()
+        setupKeyaboard()
+        presenter.viewDidLoad()
     }
     
     private func setupUI() {
@@ -93,6 +108,29 @@ final class SearchViewController: UIViewController {
         }
     }
     
+    private func setupKeyaboard() {
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(keyaboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        center.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    // MARK: - Handlers
+    
+    @objc func keyaboardWillHide(notification: Notification) {
+        UIView.animate(withDuration: 0.25) {
+            self.resultsTableView.contentInset.bottom = 0.0
+        }
+    }
+    
+    @objc func keyboardWillChangeFrame(notification: Notification) {
+        guard let frame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+            return
+        }
+        UIView.animate(withDuration: 0.25) {
+            self.resultsTableView.contentInset.bottom = frame.cgRectValue.height - self.view.safeAreaInsets.bottom
+        }
+    }
+    
 }
 
 // MARK: - SearchViewInput interface implementation
@@ -100,6 +138,7 @@ final class SearchViewController: UIViewController {
 extension SearchViewController: SearchViewInput {
     
     func reloadResults(models: [WordViewModel]) {
+        resultsTableView.backgroundView = nil
         self.models = models
         self.resultsTableView.reloadData()
     }
@@ -115,8 +154,23 @@ extension SearchViewController: SearchViewInput {
         self.resultsTableView.reloadData()
     }
     
+    func setNoResultsState() {
+        resultsTableView.backgroundView = stateLabel
+        stateLabel.text = "No results found"
+    }
+    
+    func setInitialState() {
+        resultsTableView.backgroundView = stateLabel
+        stateLabel.text = "Type word in search field and press Search button"
+    }
+    
+    func setErrorState(text: String) {
+        resultsTableView.backgroundView = stateLabel
+        stateLabel.text = "An error occured while searching: \n\(text).\n\nTry search again"
+    }
+    
     func setLoadingEnabled(enabled: Bool) {
-        
+        enabled ? showLoader(with: "Searching...") : hideLoader()
     }
     
     func setFetchingLoader(enabled: Bool) {
@@ -165,7 +219,7 @@ extension SearchViewController: UITableViewDelegate & UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let meaningViewModel = models[indexPath.section].meanings[indexPath.row]
-        output.didSelectMeaning(meaningViewModel: meaningViewModel)
+        presenter.didSelectMeaning(meaningViewModel: meaningViewModel)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -181,7 +235,7 @@ extension SearchViewController: UITableViewDelegate & UITableViewDataSource {
         }
         
         // Should fetch more
-        output.shouldFetchMore()
+        presenter.shouldFetchMore()
     }
 }
 
@@ -190,15 +244,15 @@ extension SearchViewController: UITableViewDelegate & UITableViewDataSource {
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        output.searchBarShouldChange(text: text)
+        presenter.searchBarShouldChange(text: text)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        output.searchBarSearch(text: searchBar.text ?? "")
+        presenter.searchBarSearch(text: searchBar.text ?? "")
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        output.searchBarCancel()
+        presenter.searchBarCancel()
     }
     
 }

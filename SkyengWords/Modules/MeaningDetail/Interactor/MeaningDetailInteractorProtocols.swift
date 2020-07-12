@@ -9,10 +9,8 @@
 import Foundation
 
 protocol MeaningDetailInteractorInput: class {
-    func obtainMeaningDetail(meaningId: Int)
+    func obtainMeaningDetail(meaningId: Int, completion: @escaping (Result<Meaning, Error>) -> Void)
 }
 
 protocol MeaningDetailInteractorOutput: class {
-    func didObtainMeaningDetail(meaning: Meaning)
-    func didFailToObtainMeaningDetail(error: Error)
 }

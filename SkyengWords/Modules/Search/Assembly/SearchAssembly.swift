@@ -20,7 +20,7 @@ final class SearchAssembly {
         let router = SearchRouter()
         let interactor = SearchInteractor(wordsService: wordsService)
         let presenter = SearchPresenter(interactor: interactor, router: router)
-        let view = SearchViewController(output: presenter)
+        let view = SearchViewController(presenter: presenter)
         
         interactor.output = presenter
         presenter.view = view

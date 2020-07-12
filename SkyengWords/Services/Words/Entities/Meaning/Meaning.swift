@@ -18,7 +18,9 @@ struct Meaning: Codable {
     }
         
     /// Unique identifier
-    let id: Int
+    let id: String
+    /// Mening text
+    let text: String
     /// Part of speech
     let partOfSpeechCode: PartOfSpeech
     /// Meaning's translation

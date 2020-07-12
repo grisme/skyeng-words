@@ -7,6 +7,7 @@ target 'SkyengWords' do
   
   # UI
   pod 'SnapKit', '~> 5.0.0'
+  pod 'Kingfisher', '~> 5.0'
   
   # Debugging
   pod 'Reveal-SDK', '24'

@@ -36,6 +36,14 @@
 		0791B88624B9B3C300D6F19C /* SearchViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791B88524B9B3C300D6F19C /* SearchViewProtocols.swift */; };
 		0791B88924B9B98F00D6F19C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0791B88824B9B98F00D6F19C /* Colors.xcassets */; };
 		0791B88C24B9BA0000D6F19C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791B88B24B9BA0000D6F19C /* UIColor+Extension.swift */; };
+		079AEE8B24BB093400B797FE /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AEE8A24BB093400B797FE /* ImageCollectionViewCell.swift */; };
+		079AEE8D24BB0CBB00B797FE /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AEE8C24BB0CBB00B797FE /* UICollectionView+Extension.swift */; };
+		079AEE9024BB0FAE00B797FE /* MeaningDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AEE8F24BB0FAE00B797FE /* MeaningDetailViewModel.swift */; };
+		079AEE9324BB29A400B797FE /* TextSoundableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AEE9224BB29A400B797FE /* TextSoundableView.swift */; };
+		079AEE9524BB2C9900B797FE /* TagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AEE9424BB2C9900B797FE /* TagLabel.swift */; };
+		079AEE9824BB56F900B797FE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AEE9724BB56F900B797FE /* BaseViewController.swift */; };
+		079AEE9A24BB61A700B797FE /* MeaningDetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AEE9924BB61A700B797FE /* MeaningDetailRouterInput.swift */; };
+		079AEE9C24BB61C500B797FE /* MeaningDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AEE9B24BB61C500B797FE /* MeaningDetailRouter.swift */; };
 		07F6325024B8ECB100591BF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6324F24B8ECB100591BF5 /* AppDelegate.swift */; };
 		07F6325924B8ECB200591BF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F6325824B8ECB200591BF5 /* Images.xcassets */; };
 		07F6325C24B8ECB200591BF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F6325A24B8ECB200591BF5 /* LaunchScreen.storyboard */; };
@@ -89,6 +97,14 @@
 		0791B88524B9B3C300D6F19C /* SearchViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewProtocols.swift; sourceTree = "<group>"; };
 		0791B88824B9B98F00D6F19C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0791B88B24B9BA0000D6F19C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		079AEE8A24BB093400B797FE /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		079AEE8C24BB0CBB00B797FE /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		079AEE8F24BB0FAE00B797FE /* MeaningDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningDetailViewModel.swift; sourceTree = "<group>"; };
+		079AEE9224BB29A400B797FE /* TextSoundableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSoundableView.swift; sourceTree = "<group>"; };
+		079AEE9424BB2C9900B797FE /* TagLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLabel.swift; sourceTree = "<group>"; };
+		079AEE9724BB56F900B797FE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		079AEE9924BB61A700B797FE /* MeaningDetailRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningDetailRouterInput.swift; sourceTree = "<group>"; };
+		079AEE9B24BB61C500B797FE /* MeaningDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningDetailRouter.swift; sourceTree = "<group>"; };
 		07F6324C24B8ECB100591BF5 /* SkyengWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyengWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F6324F24B8ECB100591BF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07F6325824B8ECB200591BF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -151,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				075E36DD24B9F97D00378649 /* UITableView+Extension.swift */,
+				079AEE8C24BB0CBB00B797FE /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -178,6 +195,8 @@
 		075E36E524BA06F500378649 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				079AEE8E24BB0FA200B797FE /* ViewModel */,
+				079AEE8724BB090A00B797FE /* Cells */,
 				075E36EC24BA079D00378649 /* MeaningDetailViewController.swift */,
 				075E36EE24BA097800378649 /* MeaningDetailViewProtocols.swift */,
 			);
@@ -204,6 +223,8 @@
 		075E36E824BA071000378649 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				079AEE9924BB61A700B797FE /* MeaningDetailRouterInput.swift */,
+				079AEE9B24BB61C500B797FE /* MeaningDetailRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -340,10 +361,45 @@
 		0791B88D24B9BDAC00D6F19C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				079AEE9624BB56E700B797FE /* VIewControllers */,
+				079AEE9124BB299700B797FE /* Views */,
 				075E36E124B9FFBB00378649 /* Fonts */,
 				0791B88A24B9B9F000D6F19C /* Colors */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		079AEE8724BB090A00B797FE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				079AEE8A24BB093400B797FE /* ImageCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		079AEE8E24BB0FA200B797FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				079AEE8F24BB0FAE00B797FE /* MeaningDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		079AEE9124BB299700B797FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				079AEE9224BB29A400B797FE /* TextSoundableView.swift */,
+				079AEE9424BB2C9900B797FE /* TagLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		079AEE9624BB56E700B797FE /* VIewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				079AEE9724BB56F900B797FE /* BaseViewController.swift */,
+			);
+			path = VIewControllers;
 			sourceTree = "<group>";
 		};
 		07F6324324B8ECB100591BF5 = {
@@ -648,13 +704,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079AEE8D24BB0CBB00B797FE /* UICollectionView+Extension.swift in Sources */,
+				079AEE9C24BB61C500B797FE /* MeaningDetailRouter.swift in Sources */,
 				0791B87A24B9B1A000D6F19C /* SearchRouter.swift in Sources */,
+				079AEE9024BB0FAE00B797FE /* MeaningDetailViewModel.swift in Sources */,
 				0791B88C24B9BA0000D6F19C /* UIColor+Extension.swift in Sources */,
 				07F6325024B8ECB100591BF5 /* AppDelegate.swift in Sources */,
+				079AEE9824BB56F900B797FE /* BaseViewController.swift in Sources */,
 				0791B88224B9B27D00D6F19C /* SearchInteractor.swift in Sources */,
 				0791B86824B99CDC00D6F19C /* Word.swift in Sources */,
+				079AEE9324BB29A400B797FE /* TextSoundableView.swift in Sources */,
 				0791B86D24B99E3B00D6F19C /* Translation.swift in Sources */,
 				075E36E324B9FFD600378649 /* UIFont+Extension.swift in Sources */,
+				079AEE9A24BB61A700B797FE /* MeaningDetailRouterInput.swift in Sources */,
 				075E36ED24BA079D00378649 /* MeaningDetailViewController.swift in Sources */,
 				075E36D824B9F6CE00378649 /* WordViewModel.swift in Sources */,
 				0791B88024B9B25E00D6F19C /* SearchInteractorProtocols.swift in Sources */,
@@ -672,6 +734,7 @@
 				075E36FF24BA1F2F00378649 /* Definition.swift in Sources */,
 				07F6327A24B8F4D400591BF5 /* RequestType.swift in Sources */,
 				075E36EB24BA073A00378649 /* MeaningDetailAssembly.swift in Sources */,
+				079AEE9524BB2C9900B797FE /* TagLabel.swift in Sources */,
 				075E370424BA1F9400378649 /* TextSoundable.swift in Sources */,
 				0791B87C24B9B1B000D6F19C /* SearchRouterProtocols.swift in Sources */,
 				075E36F324BA0B4200378649 /* MeaningDetailInteractorProtocols.swift in Sources */,
@@ -679,6 +742,7 @@
 				0791B88424B9B30700D6F19C /* SearchPresenter.swift in Sources */,
 				075E36DB24B9F8A300378649 /* MeaningTableViewCell.swift in Sources */,
 				07F6328124B903D200591BF5 /* WordsProviding.swift in Sources */,
+				079AEE8B24BB093400B797FE /* ImageCollectionViewCell.swift in Sources */,
 				075E36F524BA0C0200378649 /* MeaningDetailInteractor.swift in Sources */,
 				0791B86F24B99F4800D6F19C /* PartOfSpeech.swift in Sources */,
 				075E36E024B9FB7900378649 /* MeaningViewModel.swift in Sources */,

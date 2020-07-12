@@ -18,12 +18,14 @@ final class MeaningDetailAssembly {
         let networkService = NetworkService()
         let wordsService = WordsService(networkService: networkService)
         
+        let router = MeaningDetailRouter()
         let interactor = MeaningDetailInteractor(wordsService: wordsService)
-        let presenter = MeaningDetailPresenter(meaningId: meaningId, interactor: interactor)
+        let presenter = MeaningDetailPresenter(meaningId: meaningId, interactor: interactor, router: router)
         let view = MeaningDetailViewController(presenter: presenter)
         
         interactor.output = presenter
         presenter.view = view
+        router.view = view
         return view
     }
     

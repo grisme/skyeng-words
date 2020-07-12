@@ -75,8 +75,12 @@ final class WordsService: WordsProviding {
                 switch result {
                 case .success(let data):
                     do {
-                        let meaning = try self.decoder.decode(Meaning.self, from: data)
-                        completion(.success(meaning))
+                        let meanings = try self.decoder.decode([Meaning].self, from: data)
+                        if let meaning = meanings.first {
+                            completion(.success(meaning))
+                        } else {
+                            completion(.failure(.invalidData))
+                        }
                     } catch {
                         completion(.failure(.invalidData))
                     }

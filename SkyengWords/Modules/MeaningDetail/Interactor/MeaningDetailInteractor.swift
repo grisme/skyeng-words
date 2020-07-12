@@ -23,14 +23,14 @@ final class MeaningDetailInteractor: MeaningDetailInteractorInput {
     
     // MARK: - MeaningDetailInteractorInput interface implementation
     
-    func obtainMeaningDetail(meaningId: Int) {
+    func obtainMeaningDetail(meaningId: Int, completion: @escaping (Result<Meaning, Error>) -> Void) {
         
-        wordsService.obtainMeaningDetail(meaningId: meaningId) { [weak self] result in
+        wordsService.obtainMeaningDetail(meaningId: meaningId) { result in
             switch result {
             case .success(let meaning):
-                self?.output?.didObtainMeaningDetail(meaning: meaning)
+                completion(.success(meaning))
             case .failure(let error):
-                self?.output?.didFailToObtainMeaningDetail(error: error)
+                completion(.failure(error))
             }
         }
         

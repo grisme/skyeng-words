@@ -6,7 +6,7 @@
 //  Copyright © 2020 Grisme Team. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct MeaningViewModel {
     
@@ -18,7 +18,20 @@ struct MeaningViewModel {
     }
     
     var transcription: String {
-        meaningDescription.transcription
+        if meaningDescription.transcription.isEmpty {
+            return "Transcription unavailable"
+        }
+        return meaningDescription.transcription
+    }
+    
+    var partOfSpeechText: String {
+        self.meaningDescription.partOfSpeechCode.displayName
+    }
+    
+    var partOfSpeechColor: UIColor {
+        return UIColor.Common.View.cellBackground
+        // TODO: May be different colors for each part of speech
+        // switch partOfSpeech { case .noun: ... }
     }
     
 }
