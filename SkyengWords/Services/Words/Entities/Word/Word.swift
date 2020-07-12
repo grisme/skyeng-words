@@ -9,7 +9,7 @@
 import Foundation
 
 /// Describes searched word entity
-struct Word: Codable {
+struct Word: Codable, Equatable {
     /// Word's identifier
     let id: Int
     /// Word's printable text value

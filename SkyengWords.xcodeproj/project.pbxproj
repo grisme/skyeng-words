@@ -47,7 +47,7 @@
 		07F6325024B8ECB100591BF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6324F24B8ECB100591BF5 /* AppDelegate.swift */; };
 		07F6325924B8ECB200591BF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F6325824B8ECB200591BF5 /* Images.xcassets */; };
 		07F6325C24B8ECB200591BF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F6325A24B8ECB200591BF5 /* LaunchScreen.storyboard */; };
-		07F6326724B8ECB200591BF5 /* SkyengWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6326624B8ECB200591BF5 /* SkyengWordsTests.swift */; };
+		07F6326724B8ECB200591BF5 /* WordsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6326624B8ECB200591BF5 /* WordsServiceTests.swift */; };
 		07F6327824B8F1BE00591BF5 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6327724B8F1BE00591BF5 /* Networking.swift */; };
 		07F6327A24B8F4D400591BF5 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6327924B8F4D400591BF5 /* RequestType.swift */; };
 		07F6327C24B8F61200591BF5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F6327B24B8F61200591BF5 /* NetworkService.swift */; };
@@ -111,7 +111,7 @@
 		07F6325B24B8ECB200591BF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07F6325D24B8ECB200591BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F6326224B8ECB200591BF5 /* SkyengWordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyengWordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07F6326624B8ECB200591BF5 /* SkyengWordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyengWordsTests.swift; sourceTree = "<group>"; };
+		07F6326624B8ECB200591BF5 /* WordsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsServiceTests.swift; sourceTree = "<group>"; };
 		07F6326824B8ECB200591BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F6327724B8F1BE00591BF5 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		07F6327924B8F4D400591BF5 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
@@ -438,7 +438,7 @@
 		07F6326524B8ECB200591BF5 /* SkyengWordsTests */ = {
 			isa = PBXGroup;
 			children = (
-				07F6326624B8ECB200591BF5 /* SkyengWordsTests.swift */,
+				07F6326624B8ECB200591BF5 /* WordsServiceTests.swift */,
 				07F6326824B8ECB200591BF5 /* Info.plist */,
 			);
 			path = SkyengWordsTests;
@@ -753,7 +753,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F6326724B8ECB200591BF5 /* SkyengWordsTests.swift in Sources */,
+				07F6326724B8ECB200591BF5 /* WordsServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
