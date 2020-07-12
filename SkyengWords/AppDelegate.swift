@@ -10,28 +10,39 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
+    // MARK: - Properties
+    
+    /// Application's core window
+    private var coreWindow: UIWindow?
+    
+    // MARK: - Lifecycle
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Starting up first module
+        setupCoreWindow(rootViewController: buildFirstModule())
+        
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    // MARK: - Private methods
+    
+    /// Setting up and showing application's core window
+    /// - Parameter rootViewController: Window's root view controller
+    private func setupCoreWindow(rootViewController: UIViewController) {
+        coreWindow = UIWindow(frame: UIScreen.main.bounds)
+        coreWindow?.rootViewController = rootViewController
+        coreWindow?.makeKeyAndVisible()
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    
+    /// Builds and prepares first module to be shown
+    /// - Returns: Prepared first module view controller
+    private func buildFirstModule() -> UIViewController {
+        let searchViewController = SearchAssembly.assembleSearch()
+        let navigationController = UINavigationController(rootViewController: searchViewController)
+        return navigationController
     }
-
-
+    
 }
 
