@@ -16,6 +16,7 @@ final class MeaningDetailViewController: BaseViewController {
     struct Appearance {
         let sideMargin: CGFloat = 16.0
         let verticalMargin: CGFloat = 8.0
+        let bottomMargin: CGFloat = 16.0
         
         let backgroundColor = UIColor.Common.View.viewBackground
         
@@ -181,7 +182,7 @@ final class MeaningDetailViewController: BaseViewController {
         examplesStackView.snp.makeConstraints { make in
             make.top.equalTo(translationLabel.snp.bottom).offset(appearance.verticalMargin)
             make.leading.trailing.equalTo(titleLabel)
-            make.bottom.lessThanOrEqualToSuperview()
+            make.bottom.lessThanOrEqualToSuperview().inset(appearance.bottomMargin)
         }
     }
     
