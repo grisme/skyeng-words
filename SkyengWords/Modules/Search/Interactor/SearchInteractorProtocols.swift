@@ -9,10 +9,8 @@
 import Foundation
 
 protocol SearchInteractorInput: class {
-    func fetchWords(query: String, page: Int)
+    func fetchWords(query: String, page: Int, completion: @escaping (Result<[Word], Error>) -> Void)
 }
 
 protocol SearchInteractorOutput: class {
-    func wordsFetchingComplete(words: [Word])
-    func wordsFetchingFailed(with error: Error)
 }

@@ -1,24 +1,30 @@
 PODS:
   - Alamofire (5.2.1)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
   - Reveal-SDK (24)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - Kingfisher (~> 5.0)
   - Reveal-SDK (= 24)
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
     - Reveal-SDK
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   Reveal-SDK: 5d7e56b8f018c0a88b3a2c10bf68d598bbd3b071
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: a4130eb5468e81f68a86714792a99824bcf18086
+PODFILE CHECKSUM: efdc7a5dca8abcd5c59e2adbd28aba3b493228ac
 
 COCOAPODS: 1.9.3

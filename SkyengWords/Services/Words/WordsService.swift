@@ -34,6 +34,7 @@ final class WordsService: WordsProviding {
     /// Enumerates service's endpoints
     private enum Endpoints: String {
         case search = "/words/search"
+        case meanings = "/meanings"
     }
     
     // MARK: - Properties
@@ -53,6 +54,49 @@ final class WordsService: WordsProviding {
     }
     
     // MARK: - WordsProviding interface implementation
+    
+    func obtainMeaningDetail(meaningId: Int, completion: @escaping MeaningDetailCompletion) {
+        
+        struct MeaningParameters: Encodable {
+            let ids: String
+        }
+        
+        let parameters = MeaningParameters(ids: "\(meaningId)")
+        
+        networkService.performRequest(
+            endpoint: Endpoints.meanings.rawValue,
+            type: .get,
+            params: parameters,
+            completion: { [weak self] result in
+                guard let self = self else {
+                    return
+                }
+                
+                switch result {
+                case .success(let data):
+                    do {
+                        let meanings = try self.decoder.decode([Meaning].self, from: data)
+                        if let meaning = meanings.first {
+                            completion(.success(meaning))
+                        } else {
+                            completion(.failure(.invalidData))
+                        }
+                    } catch {
+                        completion(.failure(.invalidData))
+                    }
+                    
+                case .failure(let error):
+                    switch error {
+                    case .requestError(let code):
+                        completion(.failure(.requestError(code: code)))
+                    default:
+                        completion(.failure(.unspecifiedError))
+                    }
+                    
+                }
+            }
+        )
+    }
     
     func obtainWords(with searchQuery: String, page: Int, pageSize: Int, completion: @escaping WordSearchCompletion) {
         
@@ -74,13 +118,11 @@ final class WordsService: WordsProviding {
             type: .get,
             params: parameters,
             completion: { [weak self] result in
-
                 guard let self = self else {
                     return
                 }
                 
                 switch result {
-                    
                 case .success(let data):
                     do {
                         let words = try self.decoder.decode([Word].self, from: data)

@@ -31,7 +31,10 @@ struct WordViewModel {
     
     init(word: Word) {
         self.word = word
-        self.meanings = self.word.meanings.map { MeaningViewModel(meaningDescription: $0) }
+        // Mapping word's meanings and filtering words with empty translation
+        self.meanings = self.word.meanings
+                .filter { !($0.translation.text ?? "").isEmpty }
+                .map { MeaningViewModel(meaningDescription: $0) }
     }
     
 }

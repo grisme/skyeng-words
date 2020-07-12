@@ -28,13 +28,13 @@ final class SearchInteractor: SearchInteractorInput {
     
     // MARK: - SearchInteractorInput implementation
     
-    func fetchWords(query: String, page: Int) {
+    func fetchWords(query: String, page: Int, completion: @escaping (Result<[Word], Error>) -> Void) {
         wordsService.obtainWords(with: query, page: page, pageSize: SearchInteractor.wordsPageSize) { [weak self] result in
             switch result {
             case .success(let words):
-                self?.output?.wordsFetchingComplete(words: words)
+                completion(.success(words))
             case .failure(let error):
-                self?.output?.wordsFetchingFailed(with: error)
+                completion(.failure(error))
             }
         }
     }

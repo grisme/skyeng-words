@@ -9,7 +9,7 @@
 import Foundation
 
 /// Describes meaning translation entity
-struct MeaningTranslation: Codable {
+struct Translation: Codable {
     /// Translation text
     let text: String?
     /// Translation note
