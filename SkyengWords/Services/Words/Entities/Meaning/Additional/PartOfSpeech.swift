@@ -9,7 +9,7 @@
 import Foundation
 
 /// Enumerates avaiable parts of speech
-enum PartOfSpeech: String, Codable, CaseIterable {
+enum PartOfSpeech: String, Codable, Equatable {
     case noun = "n"
     case verb = "v"
     case adjective = "j"

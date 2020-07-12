@@ -9,7 +9,7 @@
 import Foundation
 
 /// Describes simple word's meaning description
-struct MeaningDescription: Codable {
+struct MeaningDescription: Codable, Equatable {
     /// Unique identifier
     let id: Int
     /// Part of speech

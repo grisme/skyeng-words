@@ -14,7 +14,7 @@ final class WordsService: WordsProviding {
     // MARK: - Declarations
 
     /// Enumerates service errors
-    enum Error: LocalizedError {
+    enum Error: LocalizedError, Equatable {
         case invalidData
         case requestError(code: Int)
         case unspecifiedError
